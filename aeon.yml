@@ -163,6 +163,11 @@ skills:
   video-script: { enabled: false, schedule: "workflow_dispatch", var: "" } # receipts-first, recording-ready video script. var: <source> [--minutes N]
   weekly-aeoncard: { enabled: false, schedule: "workflow_dispatch", var: "" } # weekly token-consumption recap card (SVG) from memory/token-usage.csv. var: window + delivery control
 
+  # --- Personal research: manual only; validate before scheduling ---
+  spodumene-reverse-flotation: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
+  oil-china-chem-georisk: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
+  research-persona-review: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
+
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 8 * * *", var: "" } # ambient fleet-health check (default) — surfaces anything worth attention. var: empty=ambient check | <area>=ambient focused on that area | brief[:<area>]=priority brief (3 things to focus on, why now, what moved; folds in priority-brief)
 

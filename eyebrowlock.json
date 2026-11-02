@@ -3414,6 +3414,66 @@
       ],
       "contentHash": "sha256-b95b9c6d984ff6eb0404559092b2d20d089986784255df96b86fefaa9f87c8a0",
       "discoveredFrom": "skills/github-filing-registry/SKILL.md"
+    },
+    {
+      "id": "650f1683185f5334",
+      "tool": "aeon",
+      "scope": "project:.",
+      "type": "skill",
+      "name": "oil-china-chem-georisk",
+      "source": {
+        "kind": "local",
+        "ref": "skills/oil-china-chem-georisk"
+      },
+      "capabilities": {},
+      "files": [
+        {
+          "path": "SKILL.md",
+          "hash": "6561da8dd56dc5fe7ad82f11aa8dde868762b76f65121b975eccc1915c36c9dd"
+        }
+      ],
+      "contentHash": "sha256-b94da28e1f7282e66f293c54aaa47b53796e5a77a1b7896fa44897f973ea61bf",
+      "discoveredFrom": "skills/oil-china-chem-georisk/SKILL.md"
+    },
+    {
+      "id": "89797ba08657a21a",
+      "tool": "aeon",
+      "scope": "project:.",
+      "type": "skill",
+      "name": "spodumene-reverse-flotation",
+      "source": {
+        "kind": "local",
+        "ref": "skills/spodumene-reverse-flotation"
+      },
+      "capabilities": {},
+      "files": [
+        {
+          "path": "SKILL.md",
+          "hash": "7d01debfe7e52110d8c710489cd32951b54607d0128d36621116ff3001a0a46f"
+        }
+      ],
+      "contentHash": "sha256-7661955b0d95e7e084f6cfb670cb167204fe48f7f7125b30d2874856d0144714",
+      "discoveredFrom": "skills/spodumene-reverse-flotation/SKILL.md"
+    },
+    {
+      "id": "b50504b8dc172329",
+      "tool": "aeon",
+      "scope": "project:.",
+      "type": "skill",
+      "name": "research-persona-review",
+      "source": {
+        "kind": "local",
+        "ref": "skills/research-persona-review"
+      },
+      "capabilities": {},
+      "files": [
+        {
+          "path": "SKILL.md",
+          "hash": "a13e1daf18bdc511619c1239b89f46451dfe61db809c8b72737e93b46bbd580d"
+        }
+      ],
+      "contentHash": "sha256-6dc569e3f12a0030383877017a70b2e6784b4ecea77666e46ea187247ed326c9",
+      "discoveredFrom": "skills/research-persona-review/SKILL.md"
     }
   ]
 }
