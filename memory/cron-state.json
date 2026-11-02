@@ -1,12 +1,14 @@
 {
   "spodumene-reverse-flotation": {
-    "last_status": "failed",
+    "last_status": "success",
     "last_failed": "2026-11-02T18:21:44Z",
-    "total_runs": 3,
-    "total_successes": 0,
+    "total_runs": 4,
+    "total_successes": 1,
     "total_failures": 3,
-    "consecutive_failures": 3,
-    "success_rate": 0,
-    "last_error": "openrouter: API Error: 402 This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 4000. To incre"
+    "consecutive_failures": 0,
+    "success_rate": 0.25,
+    "last_error": "openrouter: API Error: 402 This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 4000. To incre",
+    "last_success": "2026-11-02T18:29:05Z",
+    "last_quality_score": 4
   }
 }
