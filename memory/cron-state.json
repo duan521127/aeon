@@ -1,13 +1,13 @@
 {
   "spodumene-reverse-flotation": {
     "last_status": "failed",
-    "last_failed": "2026-11-02T20:53:05Z",
-    "total_runs": 13,
+    "last_failed": "2026-11-02T20:55:15Z",
+    "total_runs": 14,
     "total_successes": 2,
-    "total_failures": 11,
-    "consecutive_failures": 8,
-    "success_rate": 0.15,
-    "last_error": "f4bf341)\"} {\"type\":\"error\",\"message\":\"unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a54606ca7aed311e-IAD, requ",
+    "total_failures": 12,
+    "consecutive_failures": 9,
+    "success_rate": 0.14,
+    "last_error": "840f258)\"} {\"type\":\"error\",\"message\":\"unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a54609f43f6b2de1-IAD, requ",
     "last_success": "2026-11-02T18:29:05Z",
     "last_quality_score": 4
   }
