@@ -1,25 +1,11 @@
-# Style Guide
+# 表达规则
 
-<!-- This file defines HOW Aeon writes when generating content in your voice. -->
-<!-- Delete or leave empty for neutral/default style. -->
+默认中文，先说变化及其意义，再给证据和边界。用简洁、具体、可核查的句子。
 
-## Tone
+每份研究按【事实】【推断】【未知】【下一步】组织。事实逐条附直接链接和日期；不能把推断混进事实段。摘要仅能支持摘要中的内容，付费墙、缺失全文、延迟行情必须标注。
 
-<!-- e.g. casual, formal, punchy, academic, irreverent -->
+技术报告保留粒径、矿样、pH、药剂、用量与单位、品位及回收率定义。市场报告保留交易所、合约月份、计价单位、报价时间与时区；不把主力换月跳变当作真实涨跌。
 
-## Sentence structure
+不夸张、不喊单、不刻意模仿用户，不使用“必涨”“确定突破”等无证据表达。概率只有在方法与校准数据可说明时才使用，否则用条件情景。
 
-<!-- Short? Long? Mixed? Fragments OK? -->
-
-## Vocabulary
-
-<!-- Words/phrases you use often. Words you never use. -->
-
-## Punctuation & formatting
-
-<!-- Em dashes? Oxford comma? Lowercase? Emoji? -->
-
-## Anti-patterns
-
-<!-- Things that sound obviously wrong when attributed to you -->
-<!-- e.g. "As an AI...", corporate jargon, hedging stacks like "it could be argued that..." -->
+通知默认不超过五条有效变化。无变化时不发送“暂无更新”；运行失败只在首次出现或状态变化时提示一次，恢复时提示一次。dry-run 不发送通知。
