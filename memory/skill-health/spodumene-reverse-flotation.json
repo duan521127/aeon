@@ -1,0 +1,17 @@
+{
+  "skill": "spodumene-reverse-flotation",
+  "last_analyzed": "2026-11-02T18:29:03Z",
+  "quality_score": 4,
+  "assessment": "内容具体、来源可追溯，并清楚区分事实、推断与未知；检索受限处也明确标为 partial，实验建议与证据边界相符。",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-11-02",
+      "score": 4,
+      "ts": "2026-11-02T18:29:03Z",
+      "harness": "codex",
+      "model": "openai/gpt-6-luna"
+    }
+  ]
+}
