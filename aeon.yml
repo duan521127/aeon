@@ -164,7 +164,7 @@ skills:
   weekly-aeoncard: { enabled: false, schedule: "workflow_dispatch", var: "" } # weekly token-consumption recap card (SVG) from memory/token-usage.csv. var: window + delivery control
 
   # --- Personal research: manual only; validate before scheduling ---
-  spodumene-reverse-flotation: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
+  spodumene-reverse-flotation: { enabled: true, schedule: "workflow_dispatch", var: "dry-run" }
   oil-china-chem-georisk: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
   research-persona-review: { enabled: false, schedule: "workflow_dispatch", var: "dry-run" }
 
