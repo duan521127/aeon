@@ -1,6 +1,6 @@
 {
   "spodumene-reverse-flotation": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-11-03T09:13:59Z",
     "total_runs": 18,
     "total_successes": 2,
@@ -9,6 +9,11 @@
     "success_rate": 0.11,
     "last_error": " account at https://platform.openai.com/account/billing.\"} {\"type\":\"turn.failed\",\"error\":{\"message\":\"rate limit exceeded: Rate limit reached for gpt-6-luna in organization org-xsdr1CsDfUOwQ30MSv5haqU5",
     "last_success": "2026-11-02T18:29:05Z",
-    "last_quality_score": 4
+    "last_quality_score": 4,
+    "last_dispatch": "2026-11-03T16:58:24Z"
+  },
+  "heartbeat": {
+    "last_dispatch": "2026-11-03T16:58:24Z",
+    "last_status": "dispatched"
   }
 }
