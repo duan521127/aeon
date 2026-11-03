@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 # Tests for scripts/install-harness.sh — the shared CLI+auth staging used by BOTH
 # aeon.yml and messages.yml.
