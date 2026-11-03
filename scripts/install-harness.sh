@@ -177,8 +177,11 @@ case "$H" in
         chmod 600 "$HOME/.codex/auth.json" || true
         echo "codex: restored ChatGPT login" ;;
       native-key)
-        # OPENAI_API_KEY in env → codex's built-in `openai` provider (its
-        # default), on codex's default model. No OpenRouter block.
+        # Codex's built-in provider reads its login state. An environment key
+        # alone can leave requests without an Authorization header. Stage the
+        # login explicitly on this ephemeral runner; never put the key in argv.
+        need OPENAI_API_KEY "an OpenAI API key for the codex harness"
+        printf '%s' "$OPENAI_API_KEY" | codex login --with-api-key >/dev/null
         cat > "$HOME/.codex/config.toml" <<'TOML'
 model_reasoning_effort = "medium"
 TOML
