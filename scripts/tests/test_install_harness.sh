@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 # Tests for scripts/install-harness.sh — the shared CLI+auth staging used by BOTH
 # aeon.yml and messages.yml.
@@ -30,6 +31,16 @@ printf '%s\n' "\$@" >> "\$PKG_LOG"
 EOF
   chmod +x "$BIN/$tool"
 done
+# Native Codex API-key login must consume the credential on stdin, not argv.
+cat > "$BIN/codex" <<'EOF'
+#!/usr/bin/env bash
+[ "$#" -eq 2 ] && [ "$1" = login ] && [ "$2" = --with-api-key ] || exit 81
+login_key="$(cat)"
+[ "$login_key" = sk-test-codex-stdin ] || exit 82
+[ "${TEST_CODEX_LOGIN_FAIL:-0}" != 1 ] || { echo 'synthetic login failure' >&2; exit 83; }
+printf 'stdin-login-ok\n' > "${PKG_LOG%/*}/codex-login.called"
+EOF
+chmod +x "$BIN/codex"
 # fx / cursor / hermes are pinned downloads (curl -o, then a sha256 check), so a
 # fake curl serves local fixtures instead of the network and records each URL.
 FIX="$BIN/fixtures"; export FIX
@@ -103,7 +114,7 @@ if [ -f "$CFG" ]; then
     && pass "codex/openrouter: provider is a TOML table" || bad "codex provider table"
 else bad "codex/openrouter: no config written"; fi
 
-run codex AUTH_MODE=native-key
+run codex AUTH_MODE=native-key OPENAI_API_KEY=sk-test-codex-stdin
 CFG="$H_DIR/.codex/config.toml"
 if [ -f "$CFG" ]; then
   # native-key uses codex's built-in openai provider — an OpenRouter block here
@@ -111,6 +122,21 @@ if [ -f "$CFG" ]; then
   grep -q 'openrouter' "$CFG" && bad "codex/native-key must not write an OpenRouter block" \
     || pass "codex/native-key: no OpenRouter block"
 else bad "codex/native-key: no config written"; fi
+
+[ -f "$H_DIR/codex-login.called" ] \
+  && pass "codex/native-key: login receives the key on stdin" || bad "codex native-key login missing"
+if grep -q 'sk-test-codex-stdin' "$H_DIR/out.txt"; then bad "codex login leaked the key"; else
+  pass "codex/native-key: credential not logged"
+fi
+if run codex AUTH_MODE=native-key OPENAI_API_KEY=; then
+  bad "codex native-key without a key must fail"
+else
+  grep -q 'needs OPENAI_API_KEY' "$H_DIR/out.txt" \
+    && pass "codex/native-key: missing key fails early" || bad "missing key error"
+fi
+if run codex AUTH_MODE=native-key OPENAI_API_KEY=sk-test-codex-stdin TEST_CODEX_LOGIN_FAIL=1; then
+  bad "codex login failure must stop staging"
+else pass "codex/native-key: login failure propagates"; fi
 
 # --- 3. kimi + vibe config generation --------------------------------------
 run kimi HM=moonshotai/kimi-k2.7-code AUTH_MODE=openrouter OPENROUTER_API_KEY=sk-test
