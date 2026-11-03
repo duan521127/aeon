@@ -188,9 +188,10 @@ model_reasoning_effort = "medium"
 # before a growing transcript makes every retry too large to fit the window.
 model_auto_compact_token_limit = 24000
 tool_output_token_limit = 1200
+model_provider = "openai-research"
 # Short default reconnect budgets can expire before a one-minute TPM window
 # resets. Retain bounded exponential backoff, but allow that window to clear.
-[model_providers.openai]
+[model_providers.openai-research]
 name = "OpenAI"
 base_url = "https://api.openai.com/v1"
 wire_api = "responses"
