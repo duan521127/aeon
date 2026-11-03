@@ -1,13 +1,13 @@
 {
   "spodumene-reverse-flotation": {
     "last_status": "failed",
-    "last_failed": "2026-11-03T08:39:28Z",
-    "total_runs": 15,
+    "last_failed": "2026-11-03T08:52:01Z",
+    "total_runs": 16,
     "total_successes": 2,
-    "total_failures": 13,
-    "consecutive_failures": 10,
+    "total_failures": 14,
+    "consecutive_failures": 11,
     "success_rate": 0.13,
-    "last_error": "a65b4ca)\"} {\"type\":\"error\",\"message\":\"unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a54a118a0cb9d7ae-SEA, requ",
+    "last_error": "account at https://platform.openai.com/account/billing.\"} {\"type\":\"turn.failed\",\"error\":{\"message\":\"rate limit exceeded: Rate limit reached for gpt-6-luna in organization org-xsdr1CsDfUOwQ30MSv5haqU5 ",
     "last_success": "2026-11-02T18:29:05Z",
     "last_quality_score": 4
   }
