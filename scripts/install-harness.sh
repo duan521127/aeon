@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 # install-harness — stage a harness CLI and its provider auth on the runner.
 #
