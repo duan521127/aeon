@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 # install-harness — stage a harness CLI and its provider auth on the runner.
 #
@@ -184,6 +185,19 @@ case "$H" in
         printf '%s' "$OPENAI_API_KEY" | codex login --with-api-key >/dev/null
         cat > "$HOME/.codex/config.toml" <<'TOML'
 model_reasoning_effort = "medium"
+# Keep repeated research/tool turns below the account's TPM budget. Compact
+# before a growing transcript makes every retry too large to fit the window.
+model_auto_compact_token_limit = 24000
+tool_output_token_limit = 1200
+# Short default reconnect budgets can expire before a one-minute TPM window
+# resets. Retain bounded exponential backoff, but allow that window to clear.
+[model_providers.openai]
+name = "OpenAI"
+base_url = "https://api.openai.com/v1"
+wire_api = "responses"
+requires_openai_auth = true
+request_max_retries = 12
+stream_max_retries = 12
 TOML
         echo "codex: OpenAI API key" ;;
       *)
