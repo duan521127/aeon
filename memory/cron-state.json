@@ -14,13 +14,13 @@
   },
   "heartbeat": {
     "last_dispatch": "2026-11-03T22:15:15Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-11-03T17:12:32Z",
-    "total_runs": 1,
+    "last_status": "failed",
+    "last_failed": "2026-11-03T22:29:42Z",
+    "total_runs": 2,
     "total_successes": 0,
-    "total_failures": 1,
-    "consecutive_failures": 1,
+    "total_failures": 2,
+    "consecutive_failures": 2,
     "success_rate": 0,
-    "last_error": " account at https://platform.openai.com/account/billing.\"} {\"type\":\"turn.failed\",\"error\":{\"message\":\"rate limit exceeded: Rate limit reached for gpt-6-luna in organization org-xsdr1CsDfUOwQ30MSv5haqU5"
+    "last_error": " API key has been invalidated., url: https://api.openai.com/v1/responses, cf-ray: a54ed1bd0ad86589-IAD, request id: req_16cb71726df749a790e5afe5e2e59b5f, auth error: 401, auth error code: token_invali"
   }
 }
