@@ -14,13 +14,13 @@
   },
   "heartbeat": {
     "last_dispatch": "2026-11-04T02:24:43Z",
-    "last_status": "dispatched",
-    "last_failed": "2026-11-03T22:29:42Z",
-    "total_runs": 2,
+    "last_status": "failed",
+    "last_failed": "2026-11-04T02:38:42Z",
+    "total_runs": 3,
     "total_successes": 0,
-    "total_failures": 2,
-    "consecutive_failures": 2,
+    "total_failures": 3,
+    "consecutive_failures": 3,
     "success_rate": 0,
-    "last_error": " API key has been invalidated., url: https://api.openai.com/v1/responses, cf-ray: a54ed1bd0ad86589-IAD, request id: req_16cb71726df749a790e5afe5e2e59b5f, auth error: 401, auth error code: token_invali"
+    "last_error": "ue., url: https://api.openai.com/v1/responses, cf-ray: a5503e7a19c7c4e1-LAX, request id: req_2a9e3a63137b49e3a63dc0249f7ece6c, auth error: 401, auth error code: expired_secret_key\"} {\"type\":\"turn.fail"
   }
 }
