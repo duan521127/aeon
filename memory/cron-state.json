@@ -1,13 +1,13 @@
 {
   "spodumene-reverse-flotation": {
-    "last_status": "dispatched",
-    "last_failed": "2026-11-04T09:52:45Z",
-    "total_runs": 22,
+    "last_status": "failed",
+    "last_failed": "2026-11-04T17:44:45Z",
+    "total_runs": 23,
     "total_successes": 2,
-    "total_failures": 20,
-    "consecutive_failures": 17,
+    "total_failures": 21,
+    "consecutive_failures": 18,
     "success_rate": 0.09,
-    "last_error": "ue., url: https://api.openai.com/v1/responses, cf-ray: a552ba204adf393c-MSP, request id: req_54bc4a67f57b4b7e925c3a43888fd86d, auth error: 401, auth error code: expired_secret_key\"} {\"type\":\"turn.fail",
+    "last_error": "ue., url: https://api.openai.com/v1/responses, cf-ray: a5556da13dc65b4c-LAX, request id: req_ffeb5379985549f4a766e8b7874eba76, auth error: 401, auth error code: expired_secret_key\"} {\"type\":\"turn.fail",
     "last_success": "2026-11-02T18:29:05Z",
     "last_quality_score": 4,
     "last_dispatch": "2026-11-04T17:30:57Z"
